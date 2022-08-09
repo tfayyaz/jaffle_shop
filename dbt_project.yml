@@ -19,6 +19,10 @@ clean-targets:
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
+
 models:
   jaffle_shop:
       materialized: table
